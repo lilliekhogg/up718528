@@ -1,0 +1,25 @@
+{
+  "name": "up718528",
+  "version": "1.0.0",
+  "description": "A web application dashboard",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lilliekhogg/cwDb.git"
+  },
+  "author": "up718528",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lilliekhogg/cwDb/issues"
+  },
+  "homepage": "https://github.com/lilliekhogg/cwDb#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "file-system": "^2.2.2",
+    "multer": "^1.3.0"
+  }
+}

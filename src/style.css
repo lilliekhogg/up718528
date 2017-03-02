@@ -1,32 +1,45 @@
 * {
-margin:0px;    
-padding:0px;  
+margin:0px;
+padding:0px;
 font-family: 'Lato', 'Arial' sans-serif;
 }
 
 html{
     background-color: #7b6e6e;
-    color: #312f2f;  
+    color: #312f2f;
 }
 header{
     text-align:center;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 20px; 
+    font-size: 20px;
     background-color: crimson;
     height:50px;
 }
+
+.clock{
+			position: absolute;
+      left: 77%;
+      top: 25%;
+			transform: translateX(-50%) translateY(-50%);
+			color: #fff;
+      background: #00BFFF;
+			font-size: 60px;
+			border: 1px solid #fff;
+			padding: 0px 5px 0px 5px;
+		}
+
 .sidebartop{
     position:absolute;
     overflow: hidden;
     top:0px;
-    bottom:0; 
+    bottom:0;
     left:0;
     width:200px;
     height:50px;
     color: #242424;
     text-align: center;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    background:rgb(195, 19, 53);   
+    background:rgb(195, 19, 53);
 }
 
 div[draggable] {
@@ -60,10 +73,10 @@ div[draggable]:hover {
     position:absolute;
     overflow: hidden;
     top:50px;
-    bottom:0; 
+    bottom:0;
     left:0;
     width:200px;
-    background:#333232;   
+    background:#333232;
 }
 
 #dashboard{
@@ -75,10 +88,10 @@ div[draggable]:hover {
     right:0;
     text-align: center;
     color: white;
-    background-color: #7b6e6e;
-    
-    
-    
+    background-color: #242222;
+
+
+
 }
 
 .scrollbar
@@ -108,5 +121,5 @@ div[draggable]:hover {
     width:100%;
     height:20px;   /* Height of the footer */
     background:#343536;
-    
+
 }

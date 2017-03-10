@@ -16,18 +16,6 @@ header{
     height:50px;
 }
 
-.clock{
-			position: absolute;
-      left: 77%;
-      top: 25%;
-			transform: translateX(-50%) translateY(-50%);
-			color: #fff;
-      background: #00BFFF;
-			font-size: 60px;
-			border: 1px solid #fff;
-			padding: 0px 5px 0px 5px;
-		}
-
 .sidebartop{
     position:absolute;
     overflow: hidden;
@@ -42,38 +30,41 @@ header{
     background:rgb(195, 19, 53);
 }
 
-div[draggable] {
-  transition: all 0.25s ease-in-out;
+/* Styling for the clock widget*/
+.clock{
+			position: absolute;
+      left: 77%;
+      top: 25%;
+			transform: translateX(-50%) translateY(-50%);
+			color: #fff;
+      background: #00BFFF;
+			font-size: 60px;
+			border: 1px solid #fff;
+			padding: 0px 5px 0px 5px;
+		}
+
+/* Styling for Quote of the Day Widet*/
+  .qotd{
+    color: #fff;
+    position: absolute;
+    font-style: 'Lato', 'Arial' sans-serif;
+    background: #ff4da6;
+    width: 185px;
+    height: 150px;
+    left: 17%;
+    top: 15%;
+    font-size: 19px;
+
+
 }
 
-div[draggable]:hover {
-  transform: scale(1.01) rotateY(-5deg) rotateX(2.5deg) rotateZ(0.5deg);
-  box-shadow: 1ex 1ex 2em #999;
-}
 
-.widg {
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  width: 120px;
-  height: 120px;
-  margin: 1ex;
-  padding: 0;
-}
-
-.widg p {
-  position: absolute;
-  top: 0;
-  left: 1ex;
-  color: #FFF;
-  text-shadow: 0 0 1em black;
-}
 
 #widgets{
     position:absolute;
     overflow: hidden;
     top:50px;
-    bottom:0;
+    bottom:5px;
     left:0;
     width:200px;
     background:#333232;
@@ -89,9 +80,33 @@ div[draggable]:hover {
     text-align: center;
     color: white;
     background-color: #242222;
+}
 
+div[draggable] {
+  transition: all 0.25s ease-in-out;
+}
 
+div[draggable]:hover {
+  transform: scale(1.01) rotateY(-5deg) rotateX(2.5deg) rotateZ(0.5deg);
+  box-shadow: 1ex 1ex 2em #999;
+}
 
+.appIcon {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  margin: 1ex;
+  padding: 0;
+}
+
+.appIcon p {
+  position: absoloute;
+  top: 0;
+  left: 1ex;
+  color: #FFF;
+  text-shadow: 0 0 1em black;
 }
 
 .scrollbar
@@ -110,7 +125,10 @@ div[draggable]:hover {
 }
 
 
+.calander{
+  position: absolute;
 
+}
 
 
 .footer{

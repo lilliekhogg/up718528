@@ -5,32 +5,32 @@
         widgets = document.getElementById("widgets"),
         icons  = [
             { id: "widgetone", name: "Time", pic: "http://icons.iconarchive.com/icons/vcferreira/firefox-os/64/clock-icon.png" },
-            { id: "widgettwo", name: "notepad", pic: "http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/64/Apps-Notepad-Metro-icon.png" },
-            { id: "widgetthree", name: "calendar", pic: "http://icons.iconarchive.com/icons/dakirby309/windows-8-metro/64/Apps-Calendar-Metro-icon.png" },
-            { id: "widgetfour", name: "qotd", pic: "http://icons.iconarchive.com/icons/elegantthemes/beautiful-flat-one-color/64/quote-icon.png" }
+            { id: "widgettwo", name: "notepad", pic: "http://icons.iconarchive.com/icons/mcdo-design/book/64/Note-Book-icon.png" },
+            { id: "widgetthree", name: "calendar", pic: "http://icons.iconarchive.com/icons/youthedesigner/new-year/64/calendar-icon.png" },
+            { id: "widgetfour", name: "qotd", pic: "http://icons.iconarchive.com/icons/elegantthemes/beautiful-flat-one-color/64/quote-icon.png" },
+            { id: "widgetfive", name: "weather", pic: "http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/64/Status-weather-showers-day-icon.png" }
         ],
 
         selected = [],
 
         widgetDragStarted = function (e) {
                  var sendThisWithTheDrag = e.target.dataset.widget;
-                 e.dataTransfer.setData("app/json", sendThisWithTheDrag);
-                 e.dataTransfer.setDragImage(box, 20, 20);
+                 e.dataTransfer.setData("application/json", sendThisWithTheDrag);
+                 e.dataTransfer.setDragImage(box, 100, 40);
                  event.dataTransfer.effectAllowed = "move";
              },
 
              widgetDropped = function (e) {
                  e.preventDefault();
-                 var appIcon,
-                     received = e.dataTransfer.getData("app/json");
+                 var widget,
+                     received = e.dataTransfer.getData("application/json");
                  if (received) {
-                     appIcon = JSON.parse(received);
-                     e.currentTarget.appendChild(document.getElementById(appIcon.id));
+                     widget = JSON.parse(received);
+                     e.currentTarget.appendChild(document.getElementById(widget.id));
 
                      if (e.currentTarget === dashboard) {
-                         treated.push(appIcon.name);
+                         selected.push(widget.name);
                          document.getElementById("log").innerHTML = selected.join(", ");
-
 
                      }
                  }
@@ -40,26 +40,28 @@
                  e.preventDefault();
              },
 
-             addWidget = function (appIcon) {
+             addWidget = function (widget) {
                  var icons = document.createElement("div"),
                      pic = document.createElement("img"),
                      nom = document.createElement("p");
 
-                 icons.setAttribute("id", appIcon.id);
+                 icons.setAttribute("id", widget.id);
                  icons.setAttribute("draggable", true);
                  icons.setAttribute("class", "icon");
                  icons.addEventListener("dragstart", widgetDragStarted);
                  widgets.appendChild(icons);
 
-                 nom.innerText = appIcon.name;
+                 nom.innerText = widget.name;
                  icons.appendChild(nom);
 
-                 pic.setAttribute("src", appIcon.pic);
+                 pic.setAttribute("src", widget.pic);
                  pic.setAttribute("alt", "a widget which can be added to the dashboard");
                  pic.setAttribute("draggable", false);
                  icons.appendChild(pic);
 
-                 icons.setAttribute("data-widget", JSON.stringify(appIcon));
+                 icons.setAttribute("data-widget", JSON.stringify(widget));
+
+
              };
 
            dashboard.addEventListener("drop", widgetDropped);

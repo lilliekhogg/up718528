@@ -5,7 +5,7 @@ font-family: 'Lato', 'Arial' sans-serif;
 }
 
 html{
-    background-color: #7b6e6e;
+    background-color: #333232;
     color: #312f2f;
 }
 header{
@@ -58,14 +58,11 @@ header{
 
 }
 
-
-
 #widgets{
     position:absolute;
-    overflow: hidden;
+    text-align: center;
     top:50px;
-    bottom:5px;
-    left:0;
+    height: 700px;
     width:200px;
     background:#333232;
 }
@@ -114,15 +111,11 @@ div[draggable]:hover {
 	margin-left: 180px;
 	float: right;
 	height: 100%;
-	width: auto;
+	width: 20px;
 	background: #606060;
 	overflow-y: scroll;
 }
 
-.force-overflow
-{
-	min-height: 450px;
-}
 
 
 .calander{

@@ -44,7 +44,6 @@ function calendar(date) {
   calendar_html += '</table>';
 
   // Display the calendar.
-  document.getElementById("myCalendar").innerText= calendar_html;
   document.getElementById("myCalendar").textContent = calendar_html;
 }
 

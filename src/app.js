@@ -5,10 +5,11 @@
         widgets = document.getElementById("widgets"),
         icons  = [
             { id: "widgetone", name: "Time", pic: "http://icons.iconarchive.com/icons/vcferreira/firefox-os/64/clock-icon.png" },
-            { id: "widgettwo", name: "notepad", pic: "http://icons.iconarchive.com/icons/mcdo-design/book/64/Note-Book-icon.png" },
-            { id: "widgetthree", name: "calendar", pic: "http://icons.iconarchive.com/icons/youthedesigner/new-year/64/calendar-icon.png" },
-            { id: "widgetfour", name: "qotd", pic: "http://icons.iconarchive.com/icons/elegantthemes/beautiful-flat-one-color/64/quote-icon.png" },
-            { id: "widgetfive", name: "weather", pic: "http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/64/Status-weather-showers-day-icon.png" }
+            { id: "widgettwo", name: "Notepad", pic: "http://icons.iconarchive.com/icons/mcdo-design/book/64/Note-Book-icon.png" },
+            { id: "widgetthree", name: "Date", pic: "http://icons.iconarchive.com/icons/youthedesigner/new-year/64/calendar-icon.png" },
+            { id: "widgetfour", name: "Qotd", pic: "http://icons.iconarchive.com/icons/elegantthemes/beautiful-flat-one-color/64/quote-icon.png" },
+            { id: "widgetfive", name: "Weather", pic: "http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/64/Status-weather-showers-day-icon.png" },
+            { id: "widgetSix", name: "Calendar", pic: "http://icons.iconarchive.com/icons/wwalczyszyn/android-style-honeycomb/64/Calendar-icon.png" }
         ],
 
         selected = [],

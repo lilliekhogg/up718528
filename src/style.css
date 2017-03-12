@@ -43,7 +43,7 @@ header{
 			padding: 0px 5px 0px 5px;
 		}
 
-/* Styling for Quote of the Day Widet*/
+/* Styling for Quote of the Day Widget*/
   .qotd{
     color: #fff;
     position: absolute;
@@ -57,7 +57,7 @@ header{
 
 
 }
-
+/* Styling for Date Widget*/
 .currentDate{
 			position: absolute;
       left: 40%;
@@ -69,6 +69,19 @@ header{
 			padding: 0px 5px 0px 5px;
 		}
 
+/* Styling for calander Widget*/
+    .cal{
+      color: #330b44;
+      position: absolute;
+      font-style: 'Lato', 'Arial';
+      background: #d57ff4;
+      width: 200px;
+      height: 150px;
+      left: 17%;
+      top: 50%;
+      font-size: 16px;
+  }
+  
 
 #widgets{
     position:absolute;
@@ -87,7 +100,6 @@ header{
     bottom: 0;
     left:200px;
     right:0;
-    text-align: center;
     color: white;
     background-color: #242222;
 }
@@ -127,13 +139,6 @@ div[draggable]:hover {
 	width: 20px;
 	background: #606060;
 	overflow-y: scroll;
-}
-
-
-
-.calander{
-  position: absolute;
-
 }
 
 

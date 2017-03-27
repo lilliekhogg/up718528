@@ -1,8 +1,17 @@
 {
-  "name": "up718528",
+  "name": "webscript3",
   "version": "1.0.0",
-  "description": "A web application dashboard",
+  "description": "Web dashboard application",
   "main": "server.js",
+  "dependencies": {
+    "express": "^4.14.1",
+    "file-system": "^2.2.2",
+    "multer": "^1.3.0",
+    "mysql": "^2.13.0",
+    "connect": "^3.6.0",
+    "sql": "^0.74.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -11,15 +20,15 @@
     "type": "git",
     "url": "git+https://github.com/lilliekhogg/cwDb.git"
   },
+  "keywords": [
+    "dashboard",
+    "web",
+    "application"
+  ],
   "author": "up718528",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lilliekhogg/cwDb/issues"
   },
-  "homepage": "https://github.com/lilliekhogg/cwDb#readme",
-  "dependencies": {
-    "express": "^4.14.1",
-    "file-system": "^2.2.2",
-    "multer": "^1.3.0"
-  }
+  "homepage": "https://github.com/lilliekhogg/cwDb#readme"
 }

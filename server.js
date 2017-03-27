@@ -1,32 +1,18 @@
-'use static';
-
-var fs = require('fs');
+'use strict';
 var express = require('express');
-var multer = require('multer');
-var mysql = require('mysql');
+ app = express();
 
-var config = require('./sql_config.json');
-var sql = mysql.createConnection(config.mysql);
-
-var app = express();
-
-var http = require("http");
-
-http.createServer(function(request, response) {
-response.writeHead(200, {"Content-Type": "text/plain"});
-response.write("Hello World");
-response.end();
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html')
 })
 
-.listen(8080);
+app.use('/', express.static(src, { extensions: ['html', 'js', 'json'] }));
 
 
-//server functions
+app.listen(8080);
+console.log("server started");
 
-
-function error(res, msg, error){
-
-res.sendStatus(500);
-console.error(msg, error);
-
+function error (res,msg,error){
+        res.sendStatus(500);
+        console.error(msg,error);
 }

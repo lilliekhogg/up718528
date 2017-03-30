@@ -2,6 +2,7 @@
 margin:0px;
 padding:0px;
 font-family: 'Lato', 'Arial' sans-serif;
+box-sizing: border-box;
 }
 
 html{
@@ -49,11 +50,11 @@ header{
     position: absolute;
     font-style: 'Lato', 'Arial';
     background: #ff4da6;
-    width: 185px;
-    height: 150px;
+    width: 200px;
+    height: 180px;
     left: 17%;
     top: 15%;
-    font-size: 19px;
+    font-size: 20px;
 
 
 }
@@ -70,18 +71,17 @@ header{
 		}
 
 /* Styling for calander Widget*/
-    .cal{
+    .calendar{
       color: #330b44;
-      position: absolute;
+      position:fixed;
       font-style: 'Lato', 'Arial';
       background: #d57ff4;
-      width: 200px;
-      height: 150px;
+      width: 270px;
+      height: 170px;
       left: 17%;
       top: 50%;
-      font-size: 16px;
+      font-size: 20px;
   }
-  
 
 #widgets{
     position:absolute;

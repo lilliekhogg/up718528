@@ -28,17 +28,17 @@ function calendar(date)
          first_week_day = this_month.getDay();
          days_in_this_month = Math.round((next_month.getTime() - this_month.getTime()) / (1000 * 60 * 60 * 24));
 
-         calendar_html = '<table style="background-color:666699; color:ffffff;">';
+         calendar_html = "<table style='background-color:666699; color:ffffff;'>";
 
-         calendar_html += '<tr><td colspan="7" align="center" style="background-color:9999cc; color:000000;">' +
-                          months[month] + ' ' + year + '</td></tr>';
+         calendar_html += "<tr><td colspan='7' align='center' style='background-color:9999cc; color:000000;'>" +
+                          months[month] + " " + year + "</td></tr>";
 
-         calendar_html += '<tr>';
+         calendar_html += "<tr>";
 
          //Fill the first week of the month with the appropriate number of blanks.
          for(week_day = 0; week_day < first_week_day; week_day++)
             {
-            calendar_html += '<td style="background-color:9999cc; color:000000;">&nbsp;</td>';
+            calendar_html += "<td style='background-color:9999cc; color:000000;''>&nbsp;</td>";
             }
 
          week_day = first_week_day;
@@ -47,21 +47,23 @@ function calendar(date)
             week_day %= 7;
 
             if(week_day == 0)
-               calendar_html += '</tr><tr>';
+               calendar_html += "</tr><tr>";
 
             //Do something different for the current day.
             if(day == day_counter)
-               calendar_html += '<td align="center"><b>' + day_counter + '</b></td>';
+               calendar_html += "<td align='center'><b>" + day_counter + "</b></td>";
             else
-               calendar_html += '<td align="center" style="background-color:9999cc; color:#000000;">&nbsp;' +
-                                day_counter + '&nbsp;</td>';
+               calendar_html += "<td align='center' style='background-color:9999cc; color:#000000;'>&nbsp;" +
+                                day_counter + "&nbsp;</td>";
 
             week_day++;
             }
 
-         calendar_html += '</tr>';
-         calendar_html += '</table>';
+         calendar_html += "</tr>";
+         calendar_html += "</table>";
 
          //Display the calendar.
-         document.write(calendar_html);
+         document.getElementById("calendar").innerHTML = calendar_html;
          }
+
+calendar();

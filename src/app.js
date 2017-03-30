@@ -12,7 +12,7 @@
             { id: "widgetSix", name: "Calendar", pic: "http://icons.iconarchive.com/icons/wwalczyszyn/android-style-honeycomb/64/Calendar-icon.png" }
         ],
 
-        selected = [],
+
 
         widgetDragStarted = function (e) {
                  var sendThisWithTheDrag = e.target.dataset.widget;
@@ -29,11 +29,46 @@
                      widget = JSON.parse(received);
                      e.currentTarget.appendChild(document.getElementById(widget.id));
 
-                     if (e.currentTarget === dashboard) {
-                         selected.push(widget.name);
-                         document.getElementById("log").innerHTML = selected.join(", ");
 
-                     }
+                     if (e.currentTarget === dashboard) {
+                         //display curent widget on dashboard
+                        icons.push(widget.name);
+                        document.getElementById("dashboard").innerHTML = "You Just Added the " + widget.name + " Widget!";
+
+                        //display selected widget
+
+                        if (widget.name === "Time"){
+                          document.getElementById("widgetDisplay").innerHTML = document.getElementById("widgetDisplay").innerHTML + '<div id ="MyClockDisplay" class = "clock">';
+                          currentTime();
+                        }else if (widget.name === "Notepad") {
+
+                        }
+                        else if (widget.name === "Date") {
+                          document.getElementById("widgetDisplay").innerHTML = document.getElementById("widgetDisplay").innerHTML + '<div id ="MyDate" class = "currentDate">';
+                          todaysDate();
+                        }
+                        else if (widget.name === "Qotd") {
+                          document.getElementById("widgetDisplay").innerHTML = document.getElementById("widgetDisplay").innerHTML +'<div id="MyQuotes" class = "qotd">';
+                          displayQuote();
+                        }
+                        else if (widget.name === "Calendar") {
+                          document.getElementById("widgetDisplay").innerHTML = document.getElementById("widgetDisplay").innerHTML + '<div id="calendar" class = "calendar">';
+                          calendar();
+                        }
+                        else if (widget.name === "Weather") {
+
+                        }
+                        //else statement incase of errorin code
+                        else {
+                          document.getElementById("widgetDisplay").innerHTML = "Error";
+                        }
+
+
+
+
+
+
+                      }
                  }
              },
 
